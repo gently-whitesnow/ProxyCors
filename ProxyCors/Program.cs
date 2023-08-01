@@ -16,12 +16,15 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAnyOriginsPolicy",
         builder =>
             builder.WithMethods("GET")
-                .AllowAnyOrigin()));
+                .AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod()));
 
 
 var app = builder.Build();
 
 app.UseCors("AllowAnyOriginsPolicy");
+
 app.MapControllers();
 
 app.Run();

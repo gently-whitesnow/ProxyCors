@@ -6,6 +6,6 @@
 Деплой
 
 ```
-docker build -t "proxy-cors" .
+docker build -t proxy-cors .
 docker run -d -p 322:322 proxy-cors
 ```

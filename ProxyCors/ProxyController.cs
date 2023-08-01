@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProxyCors;
 
+[Produces("application/json")]
 public class ProxyController : Controller
 {
     private readonly ProxyManager _proxyManager;
