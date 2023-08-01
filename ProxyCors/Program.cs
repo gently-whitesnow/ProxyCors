@@ -18,7 +18,10 @@ builder.Services.AddCors(options =>
             builder.WithMethods("GET")
                 .AllowAnyOrigin()));
 
+
 var app = builder.Build();
+
+app.UseCors("AllowAnyOriginsPolicy");
 app.MapControllers();
 
 app.Run();
